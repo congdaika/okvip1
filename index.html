@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SGHarem Clone - Full 30 người</title>
+  <link rel="stylesheet" href="css/index_new_style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <style>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+    }
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      color: white;
+    }
+    .close {
+      float: right;
+      cursor: pointer;
+      color: #f30654;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body style="background-color:#111111; color:white; font-family:sans-serif;">
+
+  <header>SGHarem Clone - Danh Sách 30 Người (Full UI)</header>
+
+  <ul class="carousel">
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(1)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 1</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 1</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$105/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(2)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 2</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 2</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$110/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(3)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 3</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 3</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$115/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(4)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 4</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 4</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$120/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(5)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 5</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 5</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$125/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(6)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 6</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 6</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$130/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(7)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 7</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 7</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$135/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(8)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 8</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 8</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$140/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(9)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 9</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 9</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$145/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(10)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 10</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 10</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$150/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(11)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 11</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 11</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$155/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(12)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 12</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 12</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$160/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(13)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 13</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 13</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$165/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(14)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 14</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 14</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$170/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(15)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 15</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 15</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$175/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(16)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 16</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 16</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$180/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(17)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 17</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 17</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$185/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(18)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 18</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 18</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$190/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(19)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 19</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 19</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$195/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(20)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 20</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 20</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$200/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(21)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 21</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 21</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$205/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(22)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 22</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 22</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$210/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(23)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 23</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 23</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$215/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(24)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 24</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 24</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$220/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(25)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 25</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 25</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$225/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(26)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 26</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 26</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$230/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(27)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 27</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 27</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$235/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(28)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 28</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 28</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$240/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(29)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 29</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 29</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$245/60mins</p>
+      </a>
+    </li>
+    
+    <li style="width:226px; overflow:hidden; border-radius:12px; background:#333; padding:10px; margin:20px;" onclick="showModal(30)">
+      <a style="color:white; text-decoration:none; cursor:pointer;">
+        <img src="https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg" width="100%" style="border-radius:8px;">
+        <p style="padding-top:4px"><em style="color:#f30654;">GirlName 30</em></p>
+        <p style="color:white; background-color:#665080; margin-top:8px; padding-top:3px">Linda 越南</p>
+        <p style="font-size:18px; color:white; padding-top:4px">Location 30</p>
+        <p style="font-size:18px; color:white; padding-top:4px">$250/60mins</p>
+      </a>
+    </li>
+    
+  </ul>
+
+  <div class="modal" id="popup">
+    <div class="modal-content" id="modalContent">
+      <span class="close" onclick="hideModal()">×</span>
+    </div>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.carousel').slick({ slidesToShow: 4, infinite: false });
+    });
+
+    function showModal(id) {
+      var popup = document.getElementById('popup');
+      var modalContent = document.getElementById('modalContent');
+      popup.style.display = 'flex';
+      
+    if (id === 1) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 1</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 1</p>
+        <p>Giá: $105/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 2) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 2</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 2</p>
+        <p>Giá: $110/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 3) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 3</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 3</p>
+        <p>Giá: $115/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 4) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 4</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 4</p>
+        <p>Giá: $120/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 5) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 5</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 5</p>
+        <p>Giá: $125/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 6) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 6</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 6</p>
+        <p>Giá: $130/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 7) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 7</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 7</p>
+        <p>Giá: $135/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 8) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 8</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 8</p>
+        <p>Giá: $140/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 9) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 9</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 9</p>
+        <p>Giá: $145/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 10) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 10</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 10</p>
+        <p>Giá: $150/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 11) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 11</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 11</p>
+        <p>Giá: $155/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 12) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 12</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 12</p>
+        <p>Giá: $160/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 13) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 13</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 13</p>
+        <p>Giá: $165/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 14) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 14</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 14</p>
+        <p>Giá: $170/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 15) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 15</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 15</p>
+        <p>Giá: $175/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 16) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 16</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 16</p>
+        <p>Giá: $180/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 17) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 17</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 17</p>
+        <p>Giá: $185/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 18) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 18</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 18</p>
+        <p>Giá: $190/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 19) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 19</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 19</p>
+        <p>Giá: $195/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 20) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 20</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 20</p>
+        <p>Giá: $200/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 21) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 21</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 21</p>
+        <p>Giá: $205/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 22) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 22</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 22</p>
+        <p>Giá: $210/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 23) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 23</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 23</p>
+        <p>Giá: $215/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 24) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 24</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 24</p>
+        <p>Giá: $220/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 25) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 25</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 25</p>
+        <p>Giá: $225/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 26) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 26</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 26</p>
+        <p>Giá: $230/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 27) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 27</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 27</p>
+        <p>Giá: $235/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 28) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 28</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 28</p>
+        <p>Giá: $240/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 29) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 29</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 29</p>
+        <p>Giá: $245/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    if (id === 30) {
+      modalContent.innerHTML = `
+        <span class='close' onclick='hideModal()'>×</span>
+        <h2>GirlName 30</h2>
+        <img src='https://cdn.shortpixel.ai/client/w_336,h_541,q_glossy,ret_wait/https://miuohectrihx34xc.com/static/image/girl.jpg' style='width:100%; border-radius:12px; margin-top:10px;'>
+        <p style='margin-top:10px;'>Địa điểm: Location 30</p>
+        <p>Giá: $250/60mins</p>
+        <p style='color:#aaa;'>Thông tin chi tiết có thể đặt ở đây.</p>
+      `;
+    }
+    
+    }
+
+    function hideModal() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
